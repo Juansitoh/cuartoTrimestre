@@ -1,0 +1,89 @@
+
+//
+// Sentencias, comandos y sintaxis - MongoDB
+//
+
+
+//
+//            -- Sintaxis general --
+// db.<nombre de colección>.<comando o sentencia>()
+//
+
+// Usar y crear base de datos
+use("prueba_2471457")
+
+// Estadísticas de la base de datos en uso
+db.stats()
+
+// Obtener ayuda
+db.help()
+
+// Insertar varios documentos/registros.
+db.pruebas.insertMany([
+    {
+        documento: 1007680962,
+        nombres: 'Usuario de',
+        apellidos: 'Prueba'
+    },
+    {
+        documento: 1020110206,
+        nombres: 'Usuario de',
+        apellidos: 'Prueba 2'
+    }
+])
+
+// Eliminación de un documento/registro.
+// db.<coleccion>.deleteOne({<identificador/campo>:<atributo del campo>})
+db.aprendices.deleteOne({nombres:"sin nombre"})
+
+// Mostrar todos los documentos/registros
+db.aprendices.find()
+
+// Mostrar todos los documentos/registros ordenados
+db.aprendices.find().pretty()
+db.aprendices.find({nombres: "<nombre>"}).pretty() // Ordenado
+
+// Mostrar documentos que contengan nombres: Brandon
+db.aprendices.find({nombres: "Brandon"})
+
+// Mostrar el primero documento/registro de la colección.
+db.aprendices.findOne()
+
+// Obtener todos los registros distintos para "nombres".
+db.aprendices.distinct("nombres")
+
+// Mostrar una cantidad de documentos/registros específica.
+db.aprendices.find().limit(2)
+
+// Mostrar documentos ordenados en orden ascendente o descendente
+// key:1 -> Orden ascendente | key:-1 -> Orden descendente
+// Key = nombre del "campo"
+db.aprendices.find().sort({nombres:1})
+
+// Muestra la cantidad de documentos/registros que contiene una colección.
+db.aprendices.countDocuments()
+
+// Realizar un recorrido(? de los datos.
+// Recorre todos los datos obtenidos por el "find" y los muestra con el print en consola de salida.
+db.aprendices.find().forEach(aprendiz => print("Nombre: "+aprendiz.nombres+" "+aprendiz.apellidos))
+
+//
+//  -- Modificación de TODO un documento/registro (Sobreescribe)--  
+// db.<colección>.update({<documento a modificar, id, nombre u otros>},{<nuevos datos>})
+
+// Sobreescribir todo el documento: db.aprendices.update({documento: 1121783987},{"documento": 1121783987, "nombres": "Brandon", "apellidos": "Quintero"})
+
+// Agregar ,{upsert: true} al final para agregar el documento en caso de que no exista.
+
+//  -- Modificación de un documento/registro (NO sobreescribe) --  
+// db.<colección>.update({<documento a modificar, id, nombre u otros>},{$set : {<nuevos datos>}})
+db.aprendices.updateOne({documento: 1121783987},{$set : {"nombres": "Juan Fernando"}})
+
+// Eliminar un documento/registro.
+db.aprendices.remove({"<identificador (id, nombre, etc)>": 1000})
+
+// Cambiar nombre de un atributo.
+db.aprendices.updateOne({"<identificador (id, nombre, etc)>": 1000},{$rename: {"<atributo>": "<nuevo nombre>"}})
+
+
+

@@ -1,0 +1,14 @@
+use ("amjor")
+
+db.carrito.insertMany([
+    {
+        nombreCliente: "Juan Fernando",
+        insumos: {
+            nombreInsumo: "Vino", cantidad: 1, precio: 40000
+        },
+        detalles: {
+            tipoAncheta: "Navideña"
+        }
+
+    }
+])

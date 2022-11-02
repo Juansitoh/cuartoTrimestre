@@ -1,0 +1,10 @@
+let mensaje = "Hola mundo"
+
+console.log(mensaje)
+
+const conversor = (precioUSD, cantidadUSD) => {
+    dolarToCOP = cantidadUSD * precioUSD
+    return dolarToCOP
+}
+
+console.log(conversor(4896.67, 5))

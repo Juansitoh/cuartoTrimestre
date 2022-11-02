@@ -1,0 +1,30 @@
+// Crear conectar a una base de datos
+use("prueba_2471457")
+
+db.aprendices.insertMany([
+    {
+        documento: 1007680962,
+        nombres: 'Juan David',
+        apellidos: 'Salado Gonza'
+    },
+    {
+        documento: 1020110206,
+        nombres: 'Sara',
+        apellidos: 'Gonzalez'
+    },
+    {
+        documento: 1121783987,
+        nombres: 'Brandon',
+        apellidos: 'Quintero'
+    },
+    {
+        documento: 1000871951,
+        nombres: 'María',
+        apellidos: 'Álvarez'
+    },
+    {
+        documento: 1129780970,
+        nombres: 'Diego',
+        apellidos: 'López'
+    }
+])
