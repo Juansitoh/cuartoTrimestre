@@ -1,0 +1,25 @@
+// pedido tiene ID, Nombre del cliente y valor total 
+
+use('PedidosF')
+
+// db.createCollection('pedidosC')
+
+// db.pedidosC.insertMany([
+//     {
+//         ID: 1,
+//         Nombre: 'Juan',
+//         Total:'40.000'
+//     },
+//     {
+//         ID: 2,
+//         Nombre: 'Brandon',
+//         Total:'50.000'
+//     },
+//     {
+//         ID:3,
+//         Nombre: 'Pedro',
+//         Total:'100.000'
+//     }
+// ])
+
+db.pedidosC.find()

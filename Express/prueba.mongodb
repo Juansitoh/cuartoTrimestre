@@ -1,0 +1,22 @@
+use('JuanF')
+
+/* db.createCollection('aprendiz') 
+
+db.aprendiz.insertMany([
+    {
+        documento: 1000682971,
+        nombre: 'Juan David',
+        celular: 3004327080
+    },
+    {
+        documento:  1001728901,
+        nombre: 'Juan Fernando',
+        celular: 3044743692
+    }
+]) 
+db.aprendiz.find()
+db.aprendiz.find({documento: 1001728901}) 
+
+db.aprendiz.deleteOne({documento: 1001728901}) */
+
+db.aprendiz.find()

@@ -1,0 +1,25 @@
+use('JuanF')
+
+/* db.createCollection('carrito')
+ db.carrito.insertMany([
+    {
+        id: 1,
+        nombreProductos: 'Vino, Chocolatinas',
+        precio: '45.000, 1.000'
+    },
+    {
+        id: 2,
+        nombreProductos: 'Agua, Chocolatinas',
+        precio: '30.000, 2.000'
+    },
+    {
+        id: 3,
+        nombreProductos: 'Hit de Mango, Chocolatinas',
+        precio: '5.000, 2.000'
+    }
+]) 
+
+db.carrito.find({precio: '45.000, 1.000'}) */
+
+/* db.carrito.deleteOne({id: 3}) */
+db.carrito.find() 
