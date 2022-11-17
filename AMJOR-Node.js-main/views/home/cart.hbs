@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {{>head}}
+
+</head>
+
+<body>
+
+    <div class="site-wrap">
+
+        <header class="site-navbar" role="banner">
+
+            {{>header}}
+
+        </header>
+
+        <div class="bg-light py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mb-0"><a href="/">Inicio</a> <span class="mx-2 mb-0">/</span> <strong
+                            class="text-black">Carrito de compras</strong></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <form class="col-md-12" method="post">
+                        <div class="site-blocks-table">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="product-thumbnail"></th>
+                                        <th class="product-name">Producto</th>
+                                        <th class="product-price">Precio</th>
+                                        <th class="product-quantity">Cantidad</th>
+                                        <th class="product-total">Total</th>
+                                        <th class="product-modify">Modificar</th>
+                                        <th class="product-remove">Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="product-thumbnail">
+                                            <img src="assets/images/ancheta1.jpg" alt="Image" class="img-fluid">
+                                        </td>
+                                        <td class="product-name">
+                                            <h2 class="h5 text-black">Ancheta 1</h2>
+                                        </td>
+                                        <td>$49.00</td>
+                                        <td>
+                                            <div class="input-group mb-3" style="max-width: 120px;">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-primary js-btn-minus"
+                                                        type="button">&minus;</button>
+                                                </div>
+                                                <input type="text" class="form-control text-center" value="1"
+                                                    placeholder="" aria-label="Example text with button addon"
+                                                    aria-describedby="button-addon1">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-primary js-btn-plus"
+                                                        type="button">&plus;</button>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </td>
+                                        <td>$49.900</td>
+                                        <td><button type="button" class="btn btn-primary icon-edit" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg"></button></td>
+                                        <td><a href="#" class="btn btn-primary btn-sm icon-trash"></a></td>
+                                        <!-- <td><a href="#" class="btn btn-primary btn-sm icon-pencil"></a> <a href="#" class="btn btn-primary btn-sm">X</a></td> -->
+                                        <!-- <td><a href="#" class="btn btn-primary btn-sm">X</a></td> -->
+                                    </tr>
+
+                                    <tr>
+                                        <td class="product-thumbnail">
+                                            <img src="assets/images/ancheta2.jpg" alt="Image" class="img-fluid">
+                                        </td>
+                                        <td class="product-name">
+                                            <h2 class="h5 text-black">Ancheta 2</h2>
+                                        </td>
+                                        <td>$55.000</td>
+                                        <td>
+                                            <div class="input-group mb-3" style="max-width: 120px;">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-primary js-btn-minus"
+                                                        type="button">&minus;</button>
+                                                </div>
+                                                <input type="text" class="form-control text-center" value="1"
+                                                    placeholder="" aria-label="Example text with button addon"
+                                                    aria-describedby="button-addon1">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-primary js-btn-plus"
+                                                        type="button">&plus;</button>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td>$55.000</td>
+                                        <td><button type="button" class="btn btn-primary icon-edit" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg"></button></td>
+                                        <td><a href="#" class="btn btn-primary btn-sm icon-trash"></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row mb-5">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <button class="btn btn-primary btn-sm btn-block">Update Cart</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-outline-primary btn-sm btn-block"
+                                    onclick="window.location='shop'">Seguir
+                                    comprando</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="text-black h4" for="coupon">Coupon</label>
+                                <p>Enter your coupon code if you have one.</p>
+                            </div>
+                            <div class="col-md-8 mb-3 mb-md-0">
+                                <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-sm">Apply Coupon</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pl-5">
+                        <div class="row justify-content-end">
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="col-md-12 text-right border-bottom mb-5">
+                                        <h3 class="text-black h4 text-uppercase">TOTALES</h3>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <span class="text-black">Subtotal</span>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <strong class="text-black">$104.900</strong>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-md-6">
+                                        <span class="text-black">Total</span>
+                                    </div>
+                                    <div class="col-md-6 text-right">
+                                        <strong class="text-black">$104.900</strong>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button class="btn btn-primary btn-lg py-3 btn-block"
+                                            onclick="window.location='checkout'">Realizar
+                                            pedido</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Large modal -->
+        <div class="modal fade bd-example-modal-lg" id="modalInsumos" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true" style="!important;">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modificando producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row mb-5">
+                                <div class="col-md-12">
+                                    <div class="border p-4 rounded" role="alert">
+                                        Aquí puedes modificar una ancheta predeterminada a tu gusto. Agrega, elimina, o
+                                        cambia la cantidad de insumos. Recuerda estar seguro de los cambios que
+                                        realices, ya que después de realizar el solicitar el pedido no se puede hacer
+                                        ningún cambio.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-end">
+                                <div class="input-group mb-3 col-4">
+                                    <input type="text" class="form-control" placeholder="Buscar insumo">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline" type="button"><a href="#"
+                                                class="icon-search"></a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre Insumo</th>
+                                        <th score="col">Descripción</th>
+                                        <th scope="col">Precio unitario</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Chocolatina</td>
+                                        <td>Descripción del insumo...</td>
+                                        <td>$1.000</td>
+                                        <td><a href="#" class="btn btn-success">+ AGREGAR</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Chocolatina JUMBO</td>
+                                        <td>Descripción del insumo...</td>
+                                        <td>$2.500</td>
+                                        <td><a href="#" class="btn btn-success">+ AGREGAR</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Vino Tinto</td>
+                                        <td>Descripción del insumo...</td>
+                                        <td>$1.000</td>
+                                        <td><a href="#" class="btn btn-success">+ AGREGAR</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="site-section">
+                                <div class="container">
+
+                                    <div class="row">
+                                        <div class="col-md-12 mb-5 mb-md-0">
+                                            <h2 class="h3 mb-3 text-black">Insumos de tu ancheta</h2>
+                                            <div class="p-3 p-lg-5 border">
+                                                <table class="table site-block-order-table mb-5">
+                                                    <thead>
+                                                        <th>Producto</th>
+                                                        <th>Precio unidad</th>
+                                                        <th>Cantidad</th>
+                                                        <td></td>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Chocolatina</td>
+                                                            <td>$1.000</td>
+                                                            <td>
+                                                                <div class="input-group mb-3" style="max-width: 120px;">
+                                                                    <div class="input-group-prepend">
+                                                                        <button
+                                                                            class="btn btn-outline-primary js-btn-minus"
+                                                                            type="button">&minus;</button>
+                                                                    </div>
+                                                                    <input type="text" class="form-control text-center"
+                                                                        value="1" placeholder=""
+                                                                        aria-label="Example text with button addon"
+                                                                        aria-describedby="button-addon1">
+                                                                    <div class="input-group-append">
+                                                                        <button
+                                                                            class="btn btn-outline-primary js-btn-plus"
+                                                                            type="button">&plus;</button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#"
+                                                                    class="btn btn-primary btn-sm icon-trash"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Vino Tinto</td>
+                                                            <td>$55.000</td>
+                                                            <td>
+                                                                <div class="input-group mb-3" style="max-width: 120px;">
+                                                                    <div class="input-group-prepend">
+                                                                        <button
+                                                                            class="btn btn-outline-primary js-btn-minus"
+                                                                            type="button">&minus;</button>
+                                                                    </div>
+                                                                    <input type="text" class="form-control text-center"
+                                                                        value="1" placeholder=""
+                                                                        aria-label="Example text with button addon"
+                                                                        aria-describedby="button-addon1">
+                                                                    <div class="input-group-append">
+                                                                        <button
+                                                                            class="btn btn-outline-primary js-btn-plus"
+                                                                            type="button">&plus;</button>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td><a href="#"
+                                                                    class="btn btn-primary btn-sm icon-trash"></a>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- 
+                                    <div class="col-md-6">
+                                        <div class="row mb-5">
+                                            <div class="col-md-12">
+                                                <h2 class="h3 mb-3 text-black">Insumos</h2>
+                                                <div class="p-3 p-lg-5 border">
+                                                    
+
+                                                    <div class="border p-3 mb-3">
+                                                        <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
+                                                                href="#collapsebank" role="button" aria-expanded="false"
+                                                                aria-controls="collapsebank">Direct Bank
+                                                                Transfer</a></h3>
+
+                                                        <div class="collapse" id="collapsebank">
+                                                            <div class="py-2">
+                                                                <p class="mb-0">Make your payment directly into our bank
+                                                                    account. Please use your Order
+                                                                    ID as
+                                                                    the payment reference. Your order won’t be shipped
+                                                                    until the funds have cleared in our
+                                                                    account.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="border p-3 mb-3">
+                                                        <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
+                                                                href="#collapsecheque" role="button"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapsecheque">Cheque Payment</a>
+                                                        </h3>
+
+                                                        <div class="collapse" id="collapsecheque">
+                                                            <div class="py-2">
+                                                                <p class="mb-0">Make your payment directly into our bank
+                                                                    account. Please use your Order
+                                                                    ID as
+                                                                    the payment reference. Your order won’t be shipped
+                                                                    until the funds have cleared in our
+                                                                    account.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="border p-3 mb-5">
+                                                        <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
+                                                                href="#collapsepaypal" role="button"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapsepaypal">Paypal</a></h3>
+
+                                                        <div class="collapse" id="collapsepaypal">
+                                                            <div class="py-2">
+                                                                <p class="mb-0">Make your payment directly into our bank
+                                                                    account. Please use your Order
+                                                                    ID as
+                                                                    the payment reference. Your order won’t be shipped
+                                                                    until the funds have cleared in our
+                                                                    account.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <button class="btn btn-primary btn-lg py-3 btn-block"
+                                                            onclick="window.location='thankyou'">Realizar
+                                                            pedido</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div> -->
+                                    </div>
+                                    <!-- </form> -->
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="site-footer border-top">
+            {{>footer}}
+        </footer>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -36,8 +36,8 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Nombre Cliente</th>
-                                    <th scope="col">Last</th>
                                     <th scope="col">Detalle</th>
+                                    <th scope="col">Fecha</th>
                                     <th scope="col">Cantidad</th>
                                     <th scope="col">Precio</th>
                                     <th scope="col"></th>
@@ -48,8 +48,9 @@
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td><a href="#" class=" icon-plus" data-toggle="modal" data-target="#modalPedidos"></a></td>
+                                    <td><a href="#" class=" icon-plus" data-toggle="modal"
+                                            data-target="#modalPedidos"></a></td>
+                                    <td>20/12/2022</td>
                                     <td>5</td>
                                     <td>50.000</td>
                                     <td><a href="#" class="icon-check"></a></td>
@@ -58,8 +59,10 @@
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td><a href="#" class=" icon-plus" data-toggle="modal" data-target="#modalPedidos"></a></td>
+
+                                    <td><a href="#" class=" icon-plus" data-toggle="modal"
+                                            data-target="#modalPedidos"></a></td>
+                                    <td>20/12/2022</td>
                                     <td>4</td>
                                     <td>50.000</td>
                                     <td><a href="#" class="icon-check"></a></td>
@@ -68,8 +71,10 @@
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td><a href="#" class=" icon-plus" data-toggle="modal" data-target="#modalPedidos"></a></td>
+
+                                    <td><a href="#" class=" icon-plus" data-toggle="modal"
+                                            data-target="#modalPedidos"></a></td>
+                                    <td>20/12/2022</td>
                                     <td>3</td>
                                     <td>50.000</td>
                                     <td><a href="#" class="icon-check"></a></td>
@@ -97,7 +102,138 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Anchetas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre Ancheta</th>
+                                <th scope="col">Insumos</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Ancheta Navideña</td>
+                                <td><a href="#" class=" icon-eye" data-toggle="modal" data-target="#modalInsumos"></a>
+                                </td>
+
+                                <td>5</td>
+                                <td>50.000</td>
+                                <td><a href="#" class="icon-remove"></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+
+                                <td><a href="#" class=" icon-eye" data-toggle="modal" data-target="#modalInsumos"></a>
+                                </td>
+
+                                <td>4</td>
+                                <td>50.000</td>
+                                <td><a href="#" class="icon-remove"></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+
+                                <td><a href="#" class=" icon-eye" data-toggle="modal" data-target="#modalInsumos"></a>
+                                </td>
+
+                                <td>3</td>
+                                <td>50.000</td>
+
+                                <td><a href="#" class="icon-remove"></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <h3>Total:</h3>
+                    <h3>150.000</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" id="modalInsumos" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Insumos de la Ancheta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre Insumo</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>5</td>
+                                <td>50.000</td>
+                                <td><a href="#" class="icon-edit" data-toggle="modal" data-target="#modalModificar" ></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+
+                                <td>4</td>
+                                <td>50.000</td>
+                                <td><a href="#" class="icon-edit" data-toggle="modal" data-target="#modalModificar"></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>3</td>
+                                <td>50.000</td>
+
+                                <td><a href="#" class="icon-edit" data-toggle="modal" data-target="#modalModificar"></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <h3>Total:</h3>
+                    <h3>150.000</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" id="modalModificar" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Insumos de la Ancheta</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -106,12 +242,13 @@
                     ...
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Modificar</button>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <script src="assets/js/jquery-3.3.1.min.js"></script>
