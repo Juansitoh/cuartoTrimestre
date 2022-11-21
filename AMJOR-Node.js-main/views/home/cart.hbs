@@ -74,7 +74,8 @@
                                         <td>$49.900</td>
                                         <td><button type="button" class="btn btn-primary icon-edit" data-toggle="modal"
                                                 data-target=".bd-example-modal-lg"></button></td>
-                                        <td><a href="#" class="btn btn-primary btn-sm icon-trash"></a></td>
+                                        <td><button type="button" class="btn btn-primary icon-trash" onclick="confirmarEliminar()" ></button></td>
+                                        <!-- <td><a href="#" class="btn btn-primary btn-sm icon-trash"></a></td> -->
                                         <!-- <td><a href="#" class="btn btn-primary btn-sm icon-pencil"></a> <a href="#" class="btn btn-primary btn-sm">X</a></td> -->
                                         <!-- <td><a href="#" class="btn btn-primary btn-sm">X</a></td> -->
                                     </tr>
@@ -117,25 +118,15 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="row mb-5">
+                            <!--
                             <div class="col-md-6 mb-3 mb-md-0">
                                 <button class="btn btn-primary btn-sm btn-block">Update Cart</button>
                             </div>
+                            -->
                             <div class="col-md-6">
                                 <button class="btn btn-outline-primary btn-sm btn-block"
                                     onclick="window.location='shop'">Seguir
                                     comprando</button>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label class="text-black h4" for="coupon">Coupon</label>
-                                <p>Enter your coupon code if you have one.</p>
-                            </div>
-                            <div class="col-md-8 mb-3 mb-md-0">
-                                <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
-                            </div>
-                            <div class="col-md-4">
-                                <button class="btn btn-primary btn-sm">Apply Coupon</button>
                             </div>
                         </div>
                     </div>
@@ -401,7 +392,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Guardar cambios</button>
+                            <button type="button" class="btn btn-primary" onclick="modificadoCorrectamente()">Guardar cambios</button>
                         </div>
                     </div>
                 </div>
@@ -423,6 +414,10 @@
     <script src="assets/js/aos.js"></script>
 
     <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/validaciones/validaciones-carrito.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
