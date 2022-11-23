@@ -16,78 +16,72 @@ const getUsuario = (req, res = response) => {
 
 const postUsuario = async(req,res)=>{
 
-    const {nombreUsuario, productosPedido,precio,fecha} = req.body
+    const {ID_Rol, Correo, Contraseña} = req.body
 
-    const agregar = conexion.query(`INSERT INTO ventas (nombreUsuario,productosPedido,precio,fecha) VALUES ('${nombreUsuario}','${productosPedido}','${precio}','${fecha}')`,
-    function(error,resultado){
-        if (error) throw error
+    const insertarUsuario = dbConnection.query(`INSERT INTO usuario (ID_Usuario, ID_Rol, Correo, Contraseña) VALUES ('null', '${ID_Rol}', '${Correo}', '${Contraseña}')`,
+    function(err, resultado){
+        if (err) throw err
         res.json({
-            msg:'Campo agregado',
+            msg:'POST API MYSQL | CREAR USUARIO',
             resultado
         })
-    }
-    )
+    })
+}
+
+const deleteUsuario = async (req, res) => {
+
+    const {ID_Usuario} = req.query
+    
+    const eliminarUsuario = dbConnection.query(`DELETE FROM usuario WHERE ID_Usuario = "${ID_Usuario}"`,
+    function(err, resultado){
+        if (err) throw err
+
+        res.json({
+            msg:'DELETE API MYSQL',
+            resultado: eliminarUsuario
+    
+        })
+    })
+}
+
+const putUsuario = async (req, res) => {
+
+    const {ID_Usuario, ID_Rol, Correo, Contraseña} = req.body
+
+    const actualizarUsuario = dbConnection.query(`UPDATE usuario SET ID_Rol = "${ID_Rol}", Correo = "${Correo}", Contraseña = "${Contraseña}" WHERE ID_Usuario = "${ID_Usuario}"`,
+    function(err, resultado){
+        if (err) throw err
+
+        res.json({
+            msg:'PUT API MYSQL | ACTUALIZAR USUARIO',
+            resultado
+        })
+    })
 }
 
 /*
-    const { nombreEncuesta, documentoEncuestado, nombreEncuestado, edad, genero, empleado } = req.query
-    const encuestado = await Encuestado.find()
 
-    res.json({
-        msg: "GET API | ENCUESTA",
-        encuestado
+const patchUsuario = async (req, res) => {
+
+    const {ID_Usuario, ID_Rol, Correo, Contraseña} = req.body
+
+    const actuaPatchUsuario = dbConnection.query(`UPDATE usuario SET ID_Rol = "${ID_Rol}", Correo = "${Correo}", Contraseña = "${Contraseña}" WHERE ID_Usuario = "${ID_Usuario}"`,
+    function(err, resultado){
+        if (err) throw err
+
+        res.json({
+            msg:'PATCH API MYSQL | ACTUALIZAR USUARIO',
+            resultado
+        })
     })
-}
-
-const postUsuarioAcceso = async (req, res ) => {
-    const { nombreEncuesta, documentoEncuestado, nombreEncuestado, edad, genero, empleado } = req.body
-
-    const encuestado = new Encuestado ({nombreEncuesta, documentoEncuestado, nombreEncuestado, edad, genero, empleado})
-    await encuestado.save()
-
-    res.json({
-        msg: "POST API | ENCUESTA",
-        encuestado
-    })
-}
-
-const deleteUsuarioAcceso = async (req, res) => {
-    const { documentoEncuestado} = req.query
-    const encuestado = await Encuestado.findOneAndDelete({documentoEncuestado: documentoEncuestado})
-
-    res.json({
-        msg: "DELETE API | ENCUESTA",
-        encuestado
-    })
-}
-
-const putUsuarioAcceso = async (req, res) => {
-    const { newdocumentoEncuestado, nombreEncuesta, documentoEncuestado, nombreEncuestado, edad, genero, empleado} = req.body
-    const encuestado = await Encuestado.findOneAndUpdate({documentoEncuestado: documentoEncuestado}, { nombreEncuesta: nombreEncuesta, documentoEncuestado: newdocumentoEncuestado, nombreEncuestado: nombreEncuestado, edad: edad, genero: genero, empleado: empleado})
-
-    res.json({
-        msg: "PUT API | ENCUESTA",
-        encuestado
-    })
-}
-
-const patchUsuarioAcceso = async (req, res) => {
-    const {  nombreEncuesta, documentoEncuestado, nombreEncuestado, edad, genero, empleado } = req.body
-    const encuestado = await Encuestado.findOneAndUpdate({nombreEncuesta: nombreEncuesta, documentoEncuestado: documentoEncuestado, nombreEncuestado: nombreEncuestado, edad: edad, genero: genero, empleado: empleado})
-
-    res.json({
-        msg: "PUT API | ENCUESTA",
-        encuestado
-    })
-    {}
 }
 
 */
 
 module.exports = {
-    getUsuario
-//    postUsuarioAcceso,
-//    deleteUsuarioAcceso,
-//    putUsuarioAcceso,
+    getUsuario,
+    postUsuario,
+    deleteUsuario,
+    putUsuario
 //    patchUsuarioAcceso
 }
