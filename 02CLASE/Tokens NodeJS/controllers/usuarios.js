@@ -2,30 +2,25 @@
 const { response } = require('express')
 const Usuario = require('../models/usuarios')
 
-const getUsuario = (req, res = response) => {
-    const { correo, password, estado } = req.query
-    
+const getUsuario = async (req, res = response) => {
+    const usuario = await Usuario.find() // Buscar usuarios a través de todos los registros    
     res.json({
         msg: "GET API | Usuario",
-        correo,
-        password,
-        estado
+        usuario
     })
 }
 
 const postUsuario = async (req, res ) => {
-    const { correo, password, estado } = req.body
+    const { nombre, correo, password, rol, estado } = req.body
 
     // Instanciar el objeto con los parámetros recibidos
-    const Usuario = new Usuario ({correo, password, estado})
-    // Guardar en la base de datos
-    await Usuario.save()
+    const usuario = new Usuario ({ nombre, correo, password, rol, estado })
+    // Guardar registro en la base de datos
+    await usuario.save()
 
     res.json({
         msg: "POST API | Usuario",
-        correo,
-        password,
-        estado
+        usuario
     })
 }
 
