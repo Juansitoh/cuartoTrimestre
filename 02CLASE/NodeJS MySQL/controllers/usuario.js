@@ -1,6 +1,7 @@
 const { response } = require('express')
 const dbConnection = require('../database/config')
 
+
 const getUsuario = (req, res = response) => {
     const consultarUsuario = dbConnection.query('SELECT * FROM usuario',function (err, resultados, fields){
         if(err)
